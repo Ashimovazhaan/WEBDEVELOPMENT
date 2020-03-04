@@ -1,0 +1,45 @@
+<h2>Iphones</h2>
+
+<div *ngFor="let iphone of iphones" class="pr-item">
+
+  <h3>
+    <a [title]="iphone.name + ' details ' ">
+
+      {{iphone.name}}
+
+    </a>
+  </h3>
+
+  <img src={{iphone.image}} class="pr-img">>
+
+
+  <p *ngIf="iphone.description">
+
+    Description: {{ iphone.description}}
+
+  </p>
+  <p>
+    Rating: {{iphone.rating}}
+  </p>
+  <p>
+    Price: {{iphone.price}}
+  </p>
+
+  <button (click)="buy(iphone)">
+    Buy
+  </button>
+
+  <button (click)="share(iphone) ">
+    Share
+  </button>
+
+
+
+
+</div>
+
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

@@ -1,0 +1,45 @@
+<h2>Laptops</h2>
+
+<div *ngFor="let laptop of laptops" class="pr-item">
+
+  <h3>
+    <a [title]="laptop.name + ' details ' ">
+
+      {{laptop.name}}
+
+    </a>
+  </h3>
+
+  <img src={{laptop.image}} class="pr-img">>
+
+
+  <p *ngIf="laptop.description">
+
+    Description: {{ laptop.description}}
+
+  </p>
+  <p>
+    Rating: {{laptop.rating}}
+  </p>
+  <p>
+    Price: {{laptop.price}}
+  </p>
+
+  <button (click)="buy(laptop)">
+    Buy
+  </button>
+
+  <button (click)="share(laptop) ">
+    Share
+  </button>
+
+
+
+
+</div>
+
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

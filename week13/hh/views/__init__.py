@@ -1,1 +1,0 @@
-from .views import company_list,company_vacancies,company_detail,vacancy_list,vacancy_detail,top_vacancies
